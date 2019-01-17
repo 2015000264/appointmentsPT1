@@ -224,7 +224,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="phone-number" class="control-label"><?= lang('phone_number') ?> *</label>
-                                    <input type="text" id="phone-number" class="required form-control" maxlength="60" />
+                                    <input type="text" id="phone-number" class="form-control" maxlength="60" />
                                 </div>
                             </div>
 

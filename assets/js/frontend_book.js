@@ -61,7 +61,7 @@ window.FrontendBook = window.FrontendBook || {};
             window.console = function () {
             }; // IE compatibility
         }
-        
+
         if (GlobalVariables.displayCookieNotice) {
             cookieconsent.initialise({
                 palette: {
@@ -163,11 +163,11 @@ window.FrontendBook = window.FrontendBook || {};
 
             $selectService.trigger('change'); // Load the available hours.
 
-            // Check if a specific provider was selected. 
+            // Check if a specific provider was selected.
             var selectedProviderId = GeneralFunctions.getUrlParameter(location.href, 'provider');
 
             if (selectedProviderId && $selectProvider.find('option[value="' + selectedProviderId + '"]').length === 0) {
-                // Select a service of this provider in order to make the provider available in the select box. 
+                // Select a service of this provider in order to make the provider available in the select box.
                 for (var index in GlobalVariables.availableProviders) {
                     var provider = GlobalVariables.availableProviders[index];
 
@@ -537,9 +537,9 @@ window.FrontendBook = window.FrontendBook || {};
             '<br/>' +
             EALang.email + ': ' + email +
             '<br/>' +
-            EALang.address + ': ' + address +
+            EALang.address + ': ' + city +
             '<br/>' +
-            EALang.city + ': ' + city +
+            EALang.city + ': ' + address +
             '<br/>' +
             EALang.zip_code + ': ' + zipCode +
             '</p>';
@@ -557,7 +557,7 @@ window.FrontendBook = window.FrontendBook || {};
             phone_number: $('#phone-number').val(),
             address: $('#address').val(),
             city: $('#city').val(),
-            zip_code: $('#zip-code').val()
+            zip_code: $('').val()
         };
 
         postData.appointment = {
